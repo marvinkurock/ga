@@ -55,7 +55,7 @@ runs:
         GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
       with:
         draft: false
-        prerelease: true
+        prerelease: false
         release_name: ${{ env.GitVersion_MajorMinorPatch }}
         tag_name: ${{ env.GitVersion_MajorMinorPatch }}
         body_path: readme.md
