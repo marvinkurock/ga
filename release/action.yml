@@ -43,7 +43,7 @@ runs:
         RELEASE_FILE: ${{ inputs.RELEASE_FILE }}
       run: |
         VERSION=$GitVersion_SemVer
-        if [[ "${{ inputs.IS_PRERELEASE}}" != "true" ]];
+        if [[ "${{ inputs.IS_PRERELEASE}}" != "true" ]]; then
           VERSION=$GitVersion_MajorMinorPatch
         fi
         git config user.email deployment@tqgg.de
