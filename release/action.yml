@@ -63,7 +63,7 @@ runs:
         GITHUB_TOKEN: ${{ inputs.GITHUB_TOKEN }}
       with:
         draft: false
-        prerelease: false
+        prerelease: ${{ inputs.IS_PRERELEASE }}
         release_name: ${{ env.VERSION }}
         tag_name: ${{ env.VERSION }}
         body_path: readme.md
